@@ -1,0 +1,20 @@
+{
+  "name": "chitchat",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "tsc && node dist/index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.4.2",
+    "graphql": "^14.1.1",
+    "typescript": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.7",
+    "@types/node": "^11.9.4"
+  }
+}
