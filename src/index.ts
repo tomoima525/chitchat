@@ -1,32 +1,6 @@
-import { ApolloServer, gql } from "apollo-server";
-
-const books = [
-  {
-    title: "Harry Potter and the Chamber of Secrets",
-    author: "J.K. Rowling"
-  },
-  {
-    title: "Jurassic Park",
-    author: "Michael Crichton"
-  }
-];
-
-const typeDefs = gql`
-  type Book {
-    title: String
-    author: String
-  }
-
-  type Query {
-    books: [Book]
-  }
-`;
-
-const resolvers = {
-  Query: {
-    books: () => books
-  }
-};
+import { ApolloServer } from "apollo-server";
+import { resolvers } from "./resolvers";
+import { typeDefs } from "./typeDefs";
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
